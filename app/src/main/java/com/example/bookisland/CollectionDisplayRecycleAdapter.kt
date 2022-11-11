@@ -35,7 +35,8 @@ class CollectionDisplayRecycleAdapter (private val context: Context, private val
                 name.text = book.title
 
                 //adding an 's' to make it HTTPS since HTTP does not work
-                book.thumbnail = book.thumbnail?.subSequence(0,4).toString() + "s" + book.thumbnail?.subSequence(4, book.thumbnail!!.length).toString()
+                book.thumbnail = book.thumbnail?.subSequence(0,4).toString() + "s" + book.thumbnail?.subSequence(4, book.thumbnail!!.length)
+                    .toString()
                 Glide.with(context)
                     .load(book.thumbnail)
                     .centerInside()

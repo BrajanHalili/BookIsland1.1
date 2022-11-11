@@ -53,7 +53,7 @@ class SearchDisplay : AppCompatActivity() {
                         while(i< resultsJSON.length()){
                             val book = resultsJSON.getJSONObject(i)
                             val volumeInfo = book.getJSONObject("volumeInfo")
-                            var model = Book(null,null,null,null,null,null)
+                            var model = Book(null,null,null,null,null)
                             model.title = volumeInfo.getString("title")
                             val authors : JSONArray = volumeInfo.getJSONArray("authors")
                             if(authors.length() <= 1)
@@ -81,11 +81,11 @@ class SearchDisplay : AppCompatActivity() {
                                 model.description = volumeInfo.getString("description")
                             }
                             model.saleability = book.getJSONObject("saleInfo").getString("saleability")
-                            if(model.saleability != "NOT_FOR_SALE") {
+                            /**if(model.saleability != "NOT_FOR_SALE") {
                                 model.price =
                                     book.getJSONObject("saleInfo").getJSONObject("retailPrice")
                                         .getDouble("amount")
-                            }
+                            }**/
                             bookSearchList.add(model)
                             i++
                         }

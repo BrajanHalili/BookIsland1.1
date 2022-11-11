@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BookIsland(2.0)</string>
+    <string name="app_name">BookIsland</string>
     <string name="welcome">Welcome!</string>
     <string name="button">Button</string>
     <string name="search">Search</string>

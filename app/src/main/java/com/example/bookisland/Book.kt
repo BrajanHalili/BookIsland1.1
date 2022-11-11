@@ -1,7 +1,6 @@
 package com.example.bookisland
 
 import androidx.annotation.Keep
-import androidx.room.Entity
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -18,7 +17,6 @@ import kotlinx.serialization.Serializable
  @SerialName("thumbnail")
  var thumbnail: String?,
  @SerialName("saleability")
- var saleability: String?,
- @SerialName("amount")
- var price: Double?, ) : java.io.Serializable
-{}
+ var saleability: String?, ) : java.io.Serializable{}
+ //@SerialName("amount")
+ //var price: Double?,

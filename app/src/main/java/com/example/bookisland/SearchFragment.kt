@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
@@ -88,7 +87,7 @@ class SearchFragment : Fragment() {
 
                                 val book = resultsJSON.getJSONObject(i)
                                 val volumeInfo = book.getJSONObject("volumeInfo")
-                                var model = Book(null,null,null,null,null,null)
+                                var model = Book(null,null,null,null,null)
                                 model.title = volumeInfo.getString("title")
                                 val authors : JSONArray = volumeInfo.getJSONArray("authors")
                                 if(authors.length() <= 1)
@@ -116,11 +115,11 @@ class SearchFragment : Fragment() {
                                     model.description = volumeInfo.getString("description")
                                 }
                                 model.saleability = book.getJSONObject("saleInfo").getString("saleability")
-                                if(model.saleability != "NOT_FOR_SALE") {
+                                /**if(model.saleability != "NOT_FOR_SALE") {
                                     model.price =
                                         book.getJSONObject("saleInfo").getJSONObject("retailPrice")
                                             .getDouble("amount")
-                                }
+                                }**/
                                 listOfBooks.add(model)
                                 i++
                             }

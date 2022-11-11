@@ -1,7 +1,6 @@
 package com.example.bookisland
 
 import androidx.room.*
-import com.google.gson.annotations.Expose
 
 /**
 @Entity(tableName = "profile")
@@ -23,6 +22,7 @@ data class CollectionEntity(
     @PrimaryKey(autoGenerate = true) var id: Long = 0,
 )
 
+@kotlinx.serialization.Serializable
 @Entity(tableName = "book_table")
 data  class BookEntity(
     @ColumnInfo(name = "title") var title: String,
@@ -30,5 +30,5 @@ data  class BookEntity(
     @ColumnInfo(name = "description") var  description: String,
     @ColumnInfo(name = "thumbnail") var thumbnail: String,
     @ColumnInfo(name = "saleability") var saleability: String,
-    @ColumnInfo(name = "price") var price: Double
+    //@ColumnInfo(name = "price") var price: Double
 )

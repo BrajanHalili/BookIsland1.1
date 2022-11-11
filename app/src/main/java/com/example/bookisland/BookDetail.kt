@@ -1,11 +1,13 @@
 package com.example.bookisland
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import android.text.method.ScrollingMovementMethod
+import android.widget.Button
 
 class BookDetail: AppCompatActivity() {
     private lateinit var BookTitle: TextView
@@ -14,6 +16,7 @@ class BookDetail: AppCompatActivity() {
     private lateinit var BookDescription: TextView
     private lateinit var BookPrice: TextView
     private lateinit var BookSaleability: TextView
+    private lateinit var AddOrRemove: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.book_detail)
@@ -23,12 +26,12 @@ class BookDetail: AppCompatActivity() {
         BookImage = findViewById(R.id.BookImage)
         BookDescription = findViewById(R.id.Description)
         BookSaleability = findViewById(R.id.saleability)
+        AddOrRemove = findViewById(R.id.AddOrRemove)
 
-        var bundle = intent.extras
+        val bundle = intent.extras
         val book = bundle?.getSerializable("value") as Book
-        //val book = intent.getSerializableExtra("Book Details") as Book
 
-        BookPrice.text = "Price: " + book.price.toString() + "USD"
+        //BookPrice.text = "Price: " + book.price.toString() + "USD"
         BookTitle.text = "Title: " + book.title
         BookDescription.text = book.description
         BookSaleability.text = "Availability: " + book.saleability
@@ -38,6 +41,12 @@ class BookDetail: AppCompatActivity() {
             .load(book.thumbnail)
             .centerInside()
             .into(BookImage)
+
+        AddOrRemove.setOnClickListener{
+            val i = Intent(this,AddOrRemoveBook::class.java)
+            i.putExtra("book",book)
+            startActivity(i)
+        }
     }
 
 }
