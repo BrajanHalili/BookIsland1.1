@@ -14,14 +14,12 @@ class BookDetail: AppCompatActivity() {
     private lateinit var BookAuthors: TextView
     private lateinit var BookImage: ImageView
     private lateinit var BookDescription: TextView
-    private lateinit var BookPrice: TextView
     private lateinit var BookSaleability: TextView
     private lateinit var AddOrRemove: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.book_detail)
         BookAuthors= findViewById(R.id.authors)
-        BookPrice = findViewById(R.id.price)
         BookTitle = findViewById(R.id.BookTitle)
         BookImage = findViewById(R.id.BookImage)
         BookDescription = findViewById(R.id.Description)
