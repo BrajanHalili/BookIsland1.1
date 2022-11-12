@@ -10,12 +10,12 @@
 
 ### Description
 
-Book Island helps users keep track of what books they have read or search for new books to read. They can create collections to organize their library and add books on the chosen collections. Users can also create notes on books. They can add text or a photo in every note. 
+Book Island helps users keep track of what books they have read or search for new books to read. They can create collections to organize their library and add books on the chosen collections. Users can also create notes on books.
 
 ### App Evaluation
 
 - **Category:** Education
-- **Mobile:** Uses camera in notes to comment about the books.
+- **Mobile:** Uses camera in notes to comment about the books (Stretch).
 - **Story:** Allows users to search through a book database and search for their favorite books or get suggestions about what book to read next. They can create their own collection of books and write about what they think of them. 
 - **Market:** Any person that likes reading books would be interested in this app.
 - **Habit:** Motivate users to spend more time reading books instead of watching tiktok videos and encourage them to keep reading.
@@ -27,17 +27,18 @@ Book Island helps users keep track of what books they have read or search for ne
 
 **Required Features**
 
-* Users can login 
-* Users can search books from a database and check for their electronic availability.
-* Users can click the button to add books to their collections.
-* Users can put notes on the books that they have in their collections.
-* Users can take a picture to add it to their notes.
-* Settings feature(Email info, username)
+- [X] **Users can login**
+- [X] **Users can search books from a database and check for their electronic availability.**
+- [X] **Users can click the button to add books to their collections.**
+- [X] **Users can put notes on the books that they have in their collections.**
+
+- [X] **Settings feature(Email info, username)**
 
 **Stretch Features**
 
-* Users can access their reading history in a dashboard.
-* Users can share their progress with others.
+- [ ] **Users can take a picture to add it to their notes.**
+- [ ] Users can access their reading history in a dashboard.
+- [ ] Users can share their progress with others.
 
 ### 2. Screen Archetypes
 
@@ -45,14 +46,15 @@ Book Island helps users keep track of what books they have read or search for ne
   - Click on the Email Address they want to login
 - Search Screen
   - User can search their book
+  - User can scroll through predetermined categories
 - Collections
   - User can see their book collections
-  - User can add new collections
+  - User can add new collections or remove collections
   - Place notes on the books that are addded to their collection.
 - Settings
     - User can change their email address
     - Logout from the app
-    - Delete their account
+    
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
