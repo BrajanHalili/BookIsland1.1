@@ -27,6 +27,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".MainActivity3"
+            android:exported="false">
+        </activity>
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false">
             <meta-data

@@ -16,6 +16,7 @@ class BookDetail: AppCompatActivity() {
     private lateinit var BookDescription: TextView
     private lateinit var BookSaleability: TextView
     private lateinit var AddOrRemove: Button
+    private lateinit var Notes: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.book_detail)
@@ -25,6 +26,7 @@ class BookDetail: AppCompatActivity() {
         BookDescription = findViewById(R.id.Description)
         BookSaleability = findViewById(R.id.saleability)
         AddOrRemove = findViewById(R.id.AddOrRemove)
+        Notes = findViewById(R.id.notes)
 
         val bundle = intent.extras
         val book = bundle?.getSerializable("value") as Book
@@ -43,6 +45,11 @@ class BookDetail: AppCompatActivity() {
         AddOrRemove.setOnClickListener{
             val i = Intent(this,AddOrRemoveBook::class.java)
             i.putExtra("book",book)
+            startActivity(i)
+        }
+
+        Notes.setOnClickListener {
+            val i = Intent(this,MainActivity3::class.java)
             startActivity(i)
         }
     }
